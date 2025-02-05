@@ -22,7 +22,7 @@ try:
         response = requests.get('https://raw.githubusercontent.com/infophreak/Community-Code-Challenge-Solutions/refs/heads/main/Random%20Quote%20Generator/l0wk3y/quotes.json')
         quotes = response.json()
         quote = random.choice(quotes)
-        print(f"\r{' ' * 80}", end='', flush=True)  # Clear the line
+        print(f"\r{' ' * 80}", end='', flush=True)
         print(f"\r{quote['q']} - {bcolors.OKGREEN}{quote['a']}{bcolors.ENDC}", end='', flush=True)
         sleep(3)
 except KeyboardInterrupt:
